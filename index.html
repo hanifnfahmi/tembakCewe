@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="styl">
+    <title>Tembak Cewe</title>
+
+    <!-- header -->
+    <div style="background: url(https://i.postimg.cc/2yX8Khcn/tile-1629116287571-4085.jpg)" class="page-holder bg-cover min-vh-100">
+        <div class="container py-5 ">
+            <header class="text-center text-black py-5 ">
+                <h1 class="display-4 font-weight-bold mb-4">Selamat Datang</h1>
+                <p class="lead  mb-0">Website ini dibuat khusus untukmu...</p>
+                <button id='btn_music' onclick="music()" type="button" class="btn btn-outline-danger mt-5"><a class="nav-link link-danger" href="#utama">mulai</a></button>
+            </header>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fill-opacity="1" d="M0,160L30,165.3C60,171,120,181,180,176C240,171,300,149,360,138.7C420,128,480,128,540,144C600,160,660,192,720,202.7C780,213,840,203,900,170.7C960,139,1020,85,1080,90.7C1140,96,1200,160,1260,165.3C1320,171,1380,117,1410,90.7L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg> -->
+    </div>
+    
+</head>
+<body>
+    <!-- audio -->
+    <audio id='bgmusic' src="https://media1.vocaroo.com/mp3/1gl4cQoLV7bT" loop></audio>
+    <!-- halaman utama -->
+    <section id="utama">
+    <div class="jumbotron ">
+        <div class="container text-center"> 
+            <div class="row mb-3">
+            <h1><font face="courier new">Hai kamuu...</font></h1>
+            <br></br>
+            <img style="-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://gif-free.com/uploads/posts/2017-03/1489910158_patrick-star-in-love.gif">
+            <br></br>
+            <h2><font face='courier new' class="mt-2">
+                mau jadi pacarku?
+            </font></h2>
+            <br></br>
+            <button type="button" class="btn btn-outline-danger" id="btn_mau"><a class='link-danger' href="https://wa.me/628882546437?text=mauu%20dong%20xixixi">Mau</a></button>
+            <br></br>
+            <button type="button" class="btn btn-outline-danger" id="btn_gamau" ><a class='link-danger' href="https://wa.me/628882546437?text=maaf%20ya%20gamau%20xixixi">Gamau</a></button>
+            
+            <script>
+                // <button type="button" class="btn btn-outline-danger" id="btn_mau" onclick='alert("yeeeee dah ga jomblo wkwk")'>Mau</button>&nbsp;
+                // <button type="button" class="btn btn-outline-danger" id="btn_gamau" onclick='gamau(this)'>Gamau</button>
+                // function gamau(id){
+                //     var mau = document.getElementById('btn_mau');
+                //     var i = Math.floor(Math.random()*300)+1;
+                //     var j = Math.floor(Math.random()*5)+mau.offsetTop;
+                //     id.style.left = i+'px';
+                //     id.style.top = j+'px';
+                // }
+
+                var audioPlaying = false;
+                function music(){
+                    var audio = document.getElementById('bgmusic');
+                    if(!audioPlaying) audio.play();
+                    else audio.pause();
+                    audioPlaying = !audioPlaying;
+                }
+            </script>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
